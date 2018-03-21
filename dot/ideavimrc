@@ -17,7 +17,7 @@ set matchpairs      " 'mps'   pairs of characters that "%" can match
 set relativenumber  "the line number relative to the line with the cursor
 " set scroll          " 'scr'   lines to scroll with CTRL-U and CTRL-D
 " set scrolljump 1    " 'sj'    minimum number of lines to scroll
-set scrolloff=10   " 'so'    minimum nr. of lines above and below cursor
+set scrolloff=1   " 'so'    minimum nr. of lines above and below cursor
 " set selection       " 'sel'   what type of selection to use
 set showmode        " 'smd'   message    status line to show current mode
 " set sidescroll      " 'ss'    minimum number of columns to scroll horizontal
