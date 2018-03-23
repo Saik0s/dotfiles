@@ -1,35 +1,49 @@
 # zsh check aliases
 IFS=$' '
-local found_aliases
 local found_aliases=()
 local best_match=""
 local v
+
 [[ -z "$(echo $1)" ]] && return
+
 local carr=($(echo $1))
 local c=${carr[@]:0:2}
+local initial_command=$c
 
-# Find alias matches
 for k in "${(@k)aliases}"; do
     v="${aliases[$k]}"
-
-    if [[ $v =~ $c ]]; then
-        found_aliases+="$k"
-
-        # Match aliases to longest portion of command
-        if [[ "${#v}" -gt "${#best_match}" ]]; then
-            best_match="$k"
-            # on equal length, choose the shortest alias
-        elif [[ "${#v}" -eq "${#best_match}" && ${#k} -lt "${#best_match}" ]]; then
-            best_match="$k"
-        fi
+    if [ "$k" = "$c" ]; then
+        c="$v"
+        break
     fi
+done # 2>/dev/null
+
+declare -a arr=("$c" "$initial_command")
+for command in "${arr[@]}"; do
+    for k in "${(@k)aliases}"; do
+        v="${aliases[$k]}"
+
+        if [[ $v =~ ^$command ]]; then
+            found_aliases+="$k"
+
+            # Match aliases to longest portion of command
+            if [[ "${#v}" -gt "${#best_match}" ]]; then
+                best_match="$k"
+                # on equal length, choose the shortest alias
+            elif [[ "${#v}" -eq "${#best_match}" && ${#k} -lt "${#best_match}" ]]; then
+                best_match="$k"
+            fi
+        fi
+    done 2>/dev/null
 done 2>/dev/null
+
 [[ -z "$best_match" ]] && return
-echo "\033[1mBest alias found for \"${aliases[$best_match]}\". You should use: \"$best_match\"\033[00m"
+[ "$best_match" = "$initial_command" ] && return
+echo "\033[0;37mTip: \033[1;32m${aliases[$best_match]}\033[0;37m = \033[1;32m$best_match\033[0m"
 [[ ${#found_aliases} -eq 1 ]] && return
-for k in ${(@ok)found_aliases:0:5}; do
-    echo "\033[1mAnother alias for \"${aliases[$k]}\". You should use: \"$k\"\033[00m"
+for k in ${(@ok)found_aliases:0:7}; do
+    [ "$k" = "$best_match" ] || [ "$k" = "$initial_command" ] || echo "\033[0;37mTip: \033[1;32m${aliases[$k]}\033[0;37m = \033[1;32m$k\033[0m"
 done
-[[ ${#found_aliases} -gt 5 ]] && echo "\033[1...\033[00m"
+# [[ ${#found_aliases} -gt 7 ]] && echo "\033[1;37m...\033[00m"
 
 # vim: set filetype=zsh :
