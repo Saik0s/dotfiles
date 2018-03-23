@@ -3,10 +3,6 @@ DOT_FOLDER = $(shell pwd)
 .PHONY: all
 all: clean install
 
-.PHONY: path
-path:
-	echo $(DOT_FOLDER)
-
 .PHONY: install
 install: zgen link
 	zsh ~/.zshrc
@@ -14,21 +10,25 @@ install: zgen link
 
 .PHONY: macos
 macos:
-	sh $(DOT_FOLDER)/.macos
+	sh "$(DOT_FOLDER)/.macos"
+
+.PHONY: brew
+brew:
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew bundle
 
 .PHONY: zgen
 zgen:
 	git clone https://github.com/rslindee/zgen.git ~/.zgen
-	# git clone https://github.com/tarjoilija/zgen.git ~/.zgen
 
 .PHONY: link
 link:
-	ln -sfnv $(DOT_FOLDER)/vim ~/.vim
-	ln -sfnv $(DOT_FOLDER)/zsh ~/.zsh
-	ln -sfnv $(DOT_FOLDER)/dot/gitconfig ~/.gitconfig
-	ln -sfnv $(DOT_FOLDER)/dot/ideavimrc ~/.ideavimrc
-	ln -sfnv $(DOT_FOLDER)/dot/vimrc ~/.vimrc
-	ln -sfnv $(DOT_FOLDER)/dot/zshrc ~/.zshrc
+	ln -sfnv "$(DOT_FOLDER)/vim" ~/.vim
+	ln -sfnv "$(DOT_FOLDER)/zsh" ~/.zsh
+	ln -sfnv "$(DOT_FOLDER)/dot/gitconfig" ~/.gitconfig
+	ln -sfnv "$(DOT_FOLDER)/dot/ideavimrc" ~/.ideavimrc
+	ln -sfnv "$(DOT_FOLDER)/dot/vimrc" ~/.vimrc
+	ln -sfnv "$(DOT_FOLDER)/dot/zshrc" ~/.zshrc
 
 .PHONY: clean
 clean:
