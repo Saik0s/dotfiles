@@ -20,6 +20,7 @@ tap "neovim/neovim"
 cask "xquartz"
 brew "ack"
 brew "adns"
+brew "ant"
 brew "openssl"
 brew "readline"
 brew "sqlite"
@@ -123,12 +124,14 @@ brew "pacvim"
 brew "php", link: false
 brew "pmd"
 brew "pv"
+brew "pyenv-virtualenv"
 brew "python@2"
 brew "qemu"
 brew "ruby-build", args: ["HEAD"]
 brew "rbenv", args: ["HEAD"]
 brew "s-search"
 brew "screenfetch"
+brew "shellcheck"
 brew "source-highlight"
 brew "sourcery"
 brew "speedtest-cli"
@@ -195,5 +198,6 @@ cask "caskroom/versions/java8"
 cask "caskroom/versions/skype-preview"
 mas "GarageBand", id: 682658836
 mas "Numbers", id: 409203825
+mas "OhMyStar2", id: 1218642292
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
