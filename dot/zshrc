@@ -105,7 +105,7 @@ export PATH="$HOME/flutter/bin":$PATH
 export PATH=$HOME/Documents/Projects/flutter/bin:$PATH
 
 fpath=(~/.zsh/funcs $fpath)
-autoload _custom_check_aliases _clean _update _movelink _commit
+autoload _custom_check_aliases _clean _update _movelink _commit _git_ignore_remove
 
 # Load custom functions
 include $HOME/.zsh/functions.zsh
