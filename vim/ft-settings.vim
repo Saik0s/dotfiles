@@ -16,6 +16,7 @@ augroup myFiletypes
     au BufRead,BufNewFile *.sqlite setlocal filetype=sql
     au BufRead,BufNewFile *.hs setlocal filetype=haskell
     au BufRead,BufNewFile *.swift setlocal filetype=swift
+    au BufRead,BufNewFile *.swifttemplate setlocal filetype=swift
 
     " Reset concealcursor in Vim help
     au FileType help setlocal concealcursor=

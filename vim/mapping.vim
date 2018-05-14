@@ -4,7 +4,7 @@ noremap <CR> :
 noremap <M-Enter> <CR>
 noremap <M-:> :
 noremap S <nop>
-noremap ; :
+" noremap ; :
 
 nnoremap <Leader>l :call ToggleNumber()<CR>
 
@@ -42,16 +42,14 @@ nnoremap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 
 " noob tools: I've disabled these to prevent myself from getting into a bad
 " habit.
-" TODO: toggle these whenever other people need to drive.
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
-" inoremap <ESC> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " navigate splits by adding the Ctrl-modifier to the analogous vim motion
 nnoremap <C-h> <C-w>h

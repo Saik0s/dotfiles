@@ -155,6 +155,12 @@ map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 " }}}
 
+" ----- NERDCommenter ----- {{{
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+" }}}
+
 " ----- MRU ----- {{{
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>

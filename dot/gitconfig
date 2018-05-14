@@ -10,6 +10,7 @@
 [core]
     editor = /usr/local/bin/vim
 	autocrlf = input
+	askpass = git-gui--askpass
 [push]
     default = simple
 [merge]
@@ -19,3 +20,10 @@
 	update = !git pull && git submodule update --init --recursive
 [credential]
 	helper = osxkeychain
+[http]
+	postBuffer = 524288000
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

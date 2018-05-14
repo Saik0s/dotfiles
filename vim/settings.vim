@@ -65,7 +65,7 @@ if exists('&inccommand')
 endif
 set splitright         " Vertical   splits  use  right  half  of screen
 set splitbelow         " Horizontal splits  use  bottom half  of screen
-set timeoutlen=1000    " Lower ^[ timeout
+set timeoutlen=300    " Lower ^[ timeout
 set colorcolumn=+0     " show a column whenever textwidth is set
 set laststatus=2 " Always show the status line
 set smartcase
@@ -87,7 +87,7 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
 
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set scrolloff=1         "Start scrolling when we're 1 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
@@ -100,10 +100,10 @@ endif
 
 "" Switch syntax highlighting on, when the terminal has colors
 "" Also switch on highlighting the last used search pattern.
-"if &t_Co > 2 || has('gui_running')
+if &t_Co > 2 || has('gui_running')
 syntax on
 set hlsearch
-"endif
+endif
 
 if exists('+termguicolors')
   " This lets us use 24-bit "true" colors in the terminal
@@ -112,7 +112,7 @@ endif
 
 "" NeoVim and iTerm2 have support to display different cursor shapes than just
 "" the standard white block.
-"" set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175
 
 "" Backups {{{
 set backup
@@ -122,15 +122,15 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 "" }}}
 
-"augroup vimrc
-  "" Clear the current autocmd group, in case we're re-sourcing the file
-  "au!
+augroup vimrc
+  " Clear the current autocmd group, in case we're re-sourcing the file
+  au!
 
-  "" Jump to the last known cursor position when opening a file.
-  "autocmd BufReadPost *
-        "\ if line("'\"") > 1 && line("'\"") <= line("$") |
-        "\   exe "normal! g`\"" |
-        "\ endif
+  " Jump to the last known cursor position when opening a file.
+  autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
 
-"augroup END
+augroup END
 

@@ -34,6 +34,8 @@ eval "$(jenv init -)"
 # start zgen
 include $HOME/.zsh/zgen-setup.zsh
 
+theme refined
+
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -116,11 +118,10 @@ include $HOME/.zsh/aliases.zsh
 include $HOME/.fzf.zsh
 
 # zsh hook to suggest to use alias instead of full command
-autoload -Uz add-zsh-hook
-add-zsh-hook -D preexec _custom_check_aliases
-add-zsh-hook preexec _custom_check_aliases
+#autoload -Uz add-zsh-hook
+#add-zsh-hook -D preexec _custom_check_aliases
+#add-zsh-hook preexec _custom_check_aliases
 
-theme refined
 dedupe_path
 
 # personal messages
@@ -128,3 +129,5 @@ echo "--Practice pacvim--\n"
 #doing
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FORK_XCODE_WRITING=true
+export PATH="/usr/local/sbin:$PATH"
