@@ -4,15 +4,19 @@
 "set showmode
 "set history=1000
 
+set nocompatible
+
 source $HOME/.vim/init.vim
+
+set clipboard=unnamed
 
 nmap <space><space>s :action KJumpAction<CR>
 
-" easy system clipboard copy/paste
-noremap <space>y "*y
-noremap <space>Y "*Y
-noremap <space>p "*p
-noremap <space>P "*P
+" " easy system clipboard copy/paste
+" noremap <space>y "*y
+" noremap <space>Y "*Y
+" noremap <space>p "*p
+" noremap <space>P "*P
 
 " easy window navigation
 nnoremap <c-l> <c-w>l
@@ -81,6 +85,6 @@ nnoremap g<c-o> <c-o>
 nnoremap g<c-i> <c-i>
 
 " built in search looks better
-nnoremap / :action Find<cr>
+" nnoremap / :action Find<cr>
 " but preserve ideavim search
-nnoremap g/ /
+" nnoremap g/ /
