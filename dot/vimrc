@@ -1,1 +1,5 @@
+if has('python3')
+  silent! python3 1
+endif
+
 source $HOME/.vim/init.vim
