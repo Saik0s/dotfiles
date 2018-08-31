@@ -59,3 +59,4 @@ alias git=hub
 alias swiftformat='swiftformat --indent 4 --indentcase true'
 alias bef='bundle exec fastlane'
 alias be='bundle exec'
+alias t='todo.sh'
