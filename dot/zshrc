@@ -122,12 +122,19 @@ include $HOME/.fzf.zsh
 #add-zsh-hook -D preexec _custom_check_aliases
 #add-zsh-hook preexec _custom_check_aliases
 
-dedupe_path
-
-# personal messages
-echo "--Practice pacvim--\n"
-#doing
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FORK_XCODE_WRITING=true
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+dedupe_path
+
+export EMAIL="tarasenko.igor.v@gmail.com"
+export COMPANY_APPLE_ID=$EMAIL
+export ENTERPRISE_APPLE_ID=$EMAIL
+export MATCH_USERNAME=$EMAIL
+
+# personal messages
+t ls +24coms
+
+
