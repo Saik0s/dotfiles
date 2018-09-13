@@ -135,6 +135,5 @@ export ENTERPRISE_APPLE_ID=$EMAIL
 export MATCH_USERNAME=$EMAIL
 
 # personal messages
-t ls +24coms
-
+tb
 
