@@ -135,5 +135,7 @@ export ENTERPRISE_APPLE_ID=$EMAIL
 export MATCH_USERNAME=$EMAIL
 
 # personal messages
-tb
+# tb
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

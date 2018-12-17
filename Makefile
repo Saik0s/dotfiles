@@ -5,6 +5,7 @@ all: clean install
 
 .PHONY: install
 install: zgen link
+	chsh -s $(which zsh)
 	zsh ~/.zshrc
 	vim +PlugInstall! +qa
 
@@ -14,7 +15,7 @@ macos:
 
 .PHONY: brew
 brew:
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew bundle
 
 .PHONY: zgen
