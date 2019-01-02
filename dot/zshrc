@@ -125,7 +125,6 @@ include $HOME/.fzf.zsh
 export FORK_XCODE_WRITING=true
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 dedupe_path
 
@@ -134,8 +133,4 @@ export COMPANY_APPLE_ID=$EMAIL
 export ENTERPRISE_APPLE_ID=$EMAIL
 export MATCH_USERNAME=$EMAIL
 
-# personal messages
-# tb
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export LANG="en_US.UTF-8"
