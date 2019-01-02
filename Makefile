@@ -5,7 +5,7 @@ all: clean install
 
 .PHONY: install
 install: zgen link
-	chsh -s $(which zsh)
+	chsh -s "$$(which zsh)"
 	zsh ~/.zshrc
 	vim +PlugInstall! +qa
 
