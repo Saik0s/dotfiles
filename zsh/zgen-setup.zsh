@@ -80,7 +80,6 @@ function load-plugin-list() {
     #zgen load peterhurford/git-it-on.zsh
 
     # Load some oh-my-zsh plugins
-    zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/common-aliases
     zgen oh-my-zsh plugins/compleat
     zgen oh-my-zsh plugins/fasd

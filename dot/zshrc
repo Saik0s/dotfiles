@@ -134,3 +134,5 @@ export ENTERPRISE_APPLE_ID=$EMAIL
 export MATCH_USERNAME=$EMAIL
 
 export LANG="en_US.UTF-8"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
