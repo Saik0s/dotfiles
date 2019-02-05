@@ -36,8 +36,6 @@ eval "$(jenv init -)"
 # start zgen
 include $HOME/.zsh/zgen-setup.zsh
 
-theme refined
-
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -54,11 +52,9 @@ setopt hist_verify
 
 # Share your history across all your terminal windows
 setopt share_history
-#setopt noclobber
 
 # set some more options
 setopt pushd_ignore_dups
-#setopt pushd_silent
 
 # Keep a ton of history.
 export HISTSIZE=100000
@@ -100,13 +96,15 @@ if [ -d ~/.zsh-completions ]; then
     done
 fi
 
+include $HOME/.fzf.zsh
+
 #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--height 70% --reverse --border --preview "head -100 {}" '
 
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_HOME/platform-tools":$PATH
-export PATH="$HOME/flutter/bin":$PATH
-export PATH=$HOME/Documents/Projects/flutter/bin:$PATH
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
+# export PATH="$ANDROID_HOME/platform-tools":$PATH
+# export PATH="$HOME/flutter/bin":$PATH
+# export PATH=$HOME/Documents/Projects/flutter/bin:$PATH
 
 fpath=(~/.zsh/funcs $fpath)
 autoload _custom_check_aliases _clean _update _movelink _commit _git_ignore_remove
@@ -117,9 +115,6 @@ include $HOME/.zsh/functions.zsh
 # Load custom aliases
 include $HOME/.zsh/aliases.zsh
 
-include $HOME/.fzf.zsh
-
-# zsh hook to suggest to use alias instead of full command
 #autoload -Uz add-zsh-hook
 #add-zsh-hook -D preexec _custom_check_aliases
 #add-zsh-hook preexec _custom_check_aliases
