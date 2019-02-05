@@ -46,12 +46,12 @@ function load-plugin-list() {
 
     zgen oh-my-zsh themes/refined
 
-    bindkey '^[[A' history-substring-search-up
-    bindkey '^[[B' history-substring-search-down
-
     # Save it all to init script
     zgen save
 }
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 if ! zgen saved; then
     load-plugin-list
