@@ -57,8 +57,8 @@ setopt share_history
 setopt pushd_ignore_dups
 
 # Keep a ton of history.
-export HISTSIZE=100000
-export SAVEHIST=100000
+export HISTSIZE=1000
+export SAVEHIST=1000
 export HISTFILE=~/.zsh_history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
@@ -130,3 +130,5 @@ export ENTERPRISE_APPLE_ID=$EMAIL
 export MATCH_USERNAME=$EMAIL
 
 export LANG="en_US.UTF-8"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

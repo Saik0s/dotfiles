@@ -30,7 +30,7 @@ function load-plugin-list() {
     zgen oh-my-zsh plugins/rsync
     zgen oh-my-zsh plugins/safe-paste
     zgen oh-my-zsh plugins/swiftpm
-    zgen oh-my-zsh plugins/thefuck
+    # zgen oh-my-zsh plugins/thefuck
     zgen oh-my-zsh plugins/themes
     zgen oh-my-zsh plugins/vi-mode
     zgen oh-my-zsh plugins/xcode
@@ -42,7 +42,7 @@ function load-plugin-list() {
     # Add Fish-like autosuggestions to your ZSH
     zgen load zsh-users/zsh-autosuggestions
 
-    zgen load zsh-users/zsh-syntax-highlighting
+    # zgen load zsh-users/zsh-syntax-highlighting
 
     zgen oh-my-zsh themes/refined
 

@@ -15,7 +15,7 @@ Plug 'vim-scripts/cocoa.vim'
 Plug 'keith/swift.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'skwp/vim-conque'
-Plug 'eraserhd/vim-ios'
+"Plug 'eraserhd/vim-ios'
 Plug 'toyamarinyon/vim-swift',
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tomasr/molokai'

@@ -10,9 +10,8 @@
 [core]
     editor = /usr/local/bin/vim
 	autocrlf = input
-	askpass = git-gui--askpass
 [push]
-    default = simple
+	default = current
 [merge]
     renamelimit = 2415
 [alias]
@@ -20,7 +19,6 @@
 	update = !git pull && git submodule update --init --recursive
 [credential]
 	helper = osxkeychain
-	helper = !/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/bin/java -Ddebug=false -Djava.net.useSystemProxies=true -jar /usr/local/Cellar/git-credential-manager/2.0.3/libexec/git-credential-manager-2.0.3.jar
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
