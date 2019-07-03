@@ -11,7 +11,10 @@ if which exa >/dev/null 2>&1; then
     alias ll='exa -l --git'
 fi
 
-alias man='mand'
+if which mand >/dev/null 2>&1; then
+    alias man='mand'
+fi
+
 alias reload="exec $SHELL"
 
 alias killaudio='sudo killall -m -9 coreaudio'
