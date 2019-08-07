@@ -1,8 +1,5 @@
 scriptencoding utf-8
 
-let g:cmdt_install = 'cd ruby/command-t/ext/command-t && rbenv exec ruby extconf.rb && make'
-let g:ycm_install = './install.py' " --all'
-
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -10,45 +7,37 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'tokorom/clang_complete-getopts-ios'
-Plug 'vim-scripts/cocoa.vim'
-Plug 'keith/swift.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'skwp/vim-conque'
-"Plug 'eraserhd/vim-ios'
-Plug 'toyamarinyon/vim-swift',
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tomasr/molokai'
-Plug 'vim-scripts/mru.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'majutsushi/tagbar'
+
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'valloric/youcompleteme', { 'do': './install.py --all --clangd-completer' }
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 Plug 'jtratner/vim-flavored-markdown'
+Plug 'junegunn/vim-xmark', { 'do': 'make' }
+
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-sensible'
-Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/vim-xmark', { 'do': 'make' }
 Plug 'vimwiki/vimwiki'
-Plug 'valloric/youcompleteme', { 'do': './install.py' }
-Plug 'vim-scripts/bash-support.vim'
-"Plug 'wincent/command-t', { 'do': g:cmdt_install }
-Plug 'rizzatti/dash.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-scripts/TagHighlight'
+
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
+
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/vim-plug'
 Plug 'sheerun/vim-polyglot'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 syntax enable
