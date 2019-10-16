@@ -115,6 +115,9 @@ include $HOME/.zsh/functions.zsh
 # Load custom aliases
 include $HOME/.zsh/aliases.zsh
 
+# Load private
+include $HOME/.zsh/private.zsh
+
 #autoload -Uz add-zsh-hook
 #add-zsh-hook -D preexec _custom_check_aliases
 #add-zsh-hook preexec _custom_check_aliases
@@ -134,3 +137,5 @@ export LANG="en_US.UTF-8"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

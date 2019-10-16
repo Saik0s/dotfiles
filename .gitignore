@@ -4,3 +4,4 @@
 zsh/cache
 vim/autoload
 vim/plugged
+zsh/private.zsh
