@@ -1,8 +1,8 @@
 tap "buo/cask-upgrade"
+tap "dart-lang/dart"
 tap "dschee/carthage-pro"
 tap "fabsb/flutter"
 tap "facebook/fb"
-tap "homebrew/boneyard"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -24,6 +24,8 @@ brew "ack"
 brew "adns"
 # SSL/TLS cryptography library
 brew "openssl"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Library for command-line editing
 brew "readline"
 # Command-line interface for SQLite
@@ -124,8 +126,6 @@ brew "foremost"
 brew "gd"
 # Distributed revision control system
 brew "git"
-# Stores Git credentials for Visual Studio Team Services
-brew "git-credential-manager"
 # Small git utilities
 brew "git-extras"
 # Extensions to follow Vincent Driessen's branching model
@@ -149,7 +149,7 @@ brew "gnupg"
 # Bash-tool to store the private data inside a git repo
 brew "git-secret"
 # Git extension to generate reports for standup meetings
-brew "git-standup"
+brew "git-standup", link: false
 # Command-line option parsing utility
 brew "gnu-getopt"
 # Open source programming language to build simple/reliable/efficient software
@@ -158,8 +158,6 @@ brew "go"
 brew "goenv"
 # Google Search and News from the command-line
 brew "googler"
-# Generic library support script
-brew "libtool"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # The language-agnostic, universal package manager
@@ -182,6 +180,8 @@ brew "usbmuxd", args: ["HEAD"]
 brew "libimobiledevice", args: ["HEAD"]
 # Cross-platform library for communicating with iOS devices
 brew "ideviceinstaller", args: ["HEAD"]
+# Generic library support script
+brew "libtool"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Install and debug iPhone apps from the command-line
@@ -212,16 +212,12 @@ brew "make"
 brew "mas"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# Interpreted, interactive, object-oriented programming language
-brew "python@2"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Matroska media files manipulation tools
 brew "mkvtoolnix"
 # CLI for Apple's Private (Closed) Mobile Device Framework
 brew "mobiledevice"
-# High-performance, schema-free, document-oriented database
-brew "mongodb", restart_service: true
 # Collection of tools that nobody wrote when UNIX was young
 brew "moreutils"
 # Remote terminal application
@@ -238,18 +234,16 @@ brew "node"
 brew "node@8"
 # Manage multiple Node.js versions
 brew "nvm"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # ISO-C API and CLI for generating UUIDs
 brew "ossp-uuid"
 # Learn vim commands via a game
 brew "pacvim"
-# Source code analyzer for Java, JavaScript, and more
-brew "pmd"
 # GNU Portable THreads
 brew "pth"
 # Monitor data's progress through a pipe
 brew "pv"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
 # x86 and PowerPC Emulator
 brew "qemu"
 # Install various Ruby versions and implementations
@@ -264,10 +258,6 @@ brew "s-search"
 brew "screenfetch"
 # Source-code syntax highlighter
 brew "source-highlight"
-# Framework and command-line tool for interacting with SourceKit
-brew "sourcekitten"
-# Meta-programming for Swift, stop writing boilerplate code
-brew "sourcery"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Add a public key to a remote machine's authorized_keys file
@@ -293,7 +283,7 @@ brew "utf8proc"
 # Z for vim
 brew "v"
 # Vi 'workalike' with many additional features
-brew "vim"
+brew "vim", link: false
 # Use ViM as PAGER
 brew "vimpager"
 # Command-line interface to the WakaTime api
@@ -308,10 +298,6 @@ brew "wget"
 brew "winetricks"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
-# Manipulate Xcode project files
-brew "xcproj"
-# Drop-in replacement for xcodebuild with a few extra features
-brew "xctool"
 # A cross-platform build utility based on Lua
 brew "xmake"
 # Tracks most-used directories to make cd smarter
@@ -324,15 +310,19 @@ brew "zsh"
 brew "zsh-completions"
 # Zsh port of Fish shell's history search
 brew "zsh-history-substring-search"
+# The Dart SDK
+brew "dart-lang/dart/dart"
 brew "raggi/ale/openssl-osx-ca"
 brew "vapor/tap/vapor"
 cask "adobe-acrobat-pro"
+cask "adobe-creative-cloud"
 cask "amethyst"
 cask "android-file-transfer"
 cask "android-platform-tools"
-cask "android-studio"
 cask "anki"
 cask "appcleaner"
+cask "brooklyn"
+cask "calibre"
 cask "charles-beta"
 cask "cheatsheet"
 cask "clipy"
@@ -348,10 +338,18 @@ cask "imageoptim"
 cask "inloop-qlplayground"
 cask "iterm2-beta"
 cask "java"
-cask "java8"
 cask "jetbrains-toolbox"
+cask "kindle"
+cask "kindle-previewer"
+cask "lulu"
+cask "macdown"
 cask "macvim"
+cask "microsoft-office"
+cask "muse"
+cask "notion"
+cask "onedrive"
 cask "open-in-code"
+cask "philips-hue-sync"
 cask "postman"
 cask "qbittorrent"
 cask "qlmarkdown"
@@ -373,9 +371,7 @@ cask "wwdc"
 cask "xquartz"
 cask "zeplin"
 cask "fabsb/flutter/flutter"
-mas "Apple Configurator 2", id: 1037126344
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "The Unarchiver", id: 425424353
 mas "Xcode", id: 497799835
