@@ -63,3 +63,4 @@ alias swiftformat='swiftformat --indent 4 --indentcase true'
 alias bef='bundle exec fastlane'
 alias be='bundle exec'
 alias wiki="vim -c ':VimwikiIndex'"
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'

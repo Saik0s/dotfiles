@@ -15,7 +15,7 @@ Plug 'kien/rainbow_parentheses.vim'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'valloric/youcompleteme', { 'do': './install.py --all --clangd-completer' }
+Plug 'ycm-core/youcompleteme', { 'do': './install.py --all --clangd-completer' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
